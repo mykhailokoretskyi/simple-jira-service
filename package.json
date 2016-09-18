@@ -1,0 +1,17 @@
+{
+  "name": "simple-jira-service",
+  "version": "1.0.0",
+  "description": "Simple service to run jql",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "jira",
+    "jql",
+    "service",
+    "http"
+  ],
+  "author": "Mykhailo Koretskyi",
+  "license": "MIT"
+}
