@@ -13,7 +13,7 @@ export default class JiraService {
             }
         };
 
-        this.baseUrl = `${this.config.url}${this.config.apiVersion}`;
+        this.baseUrl = `${this.config.url}${this.config.apiPath}`;
     }
 
     jql(query, options) {
