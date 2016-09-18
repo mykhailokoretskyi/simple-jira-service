@@ -3,8 +3,6 @@
 import { Client } from 'node-rest-client';
 import _ from 'lodash';
 
-const config = Config.getConfig();
-
 export default class JiraService {
     constructor(config) {
         this.config = config;
