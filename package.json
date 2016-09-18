@@ -2,9 +2,21 @@
   "name": "simple-jira-service",
   "version": "1.0.0",
   "description": "Simple service to run jql",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib"
+  ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "jest",
+    "build": "babel -d lib --ignore __tests__,__mocks__ src",
+    "release": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mykhailokoretskyi/simple-jira-service.git"
   },
   "keywords": [
     "jira",
@@ -13,5 +25,26 @@
     "http"
   ],
   "author": "Mykhailo Koretskyi",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mykhailokoretskyi/simple-jira-service/issues"
+  },
+  "homepage": "https://github.com/mykhailokoretskyi/simple-jira-service",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "node-rest-client": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "jest": "^14.1.0",
+    "jest-cli": "^14.1.0"
+  },
+  "jest": {
+    "automock": false,
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
 }
